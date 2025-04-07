@@ -1,7 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const GameResult = ({ winner, gameDrawn, playerSymbol }) => {
-    const navigate = useNavigate();
     return (
         <>
         {(winner || gameDrawn) && (
@@ -22,12 +21,13 @@ const GameResult = ({ winner, gameDrawn, playerSymbol }) => {
                         >
                             Play Again
                         </button>
-                        <button
-                            onClick={() => navigate('/')}
-                            className="bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-xl shadow-lg transition text-lg"
-                        >
-                            Go Back to Home
-                        </button>
+                        <Link to={"/"}>
+                            <button
+                                className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-xl shadow-lg transition text-lg"
+                            >
+                                Go Back to Home
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
