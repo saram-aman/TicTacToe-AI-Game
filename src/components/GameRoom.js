@@ -14,7 +14,7 @@ class GameRoom extends Component {
             winner: null,
             gameDrawn: false,
         };
-        this.socket = new WebSocket('wss://tic-tac-toe-ai-server.vercel.app');
+        this.socket = new WebSocket('wss://tictactoe-ai-server.onrender.com');
     }
 
     componentDidMount() {
